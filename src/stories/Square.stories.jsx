@@ -1,5 +1,5 @@
 import React from 'react';
-import { Square } from '..';
+import { Square } from '../components/Square';
 
 export default {
   title: 'Q2/Square',
