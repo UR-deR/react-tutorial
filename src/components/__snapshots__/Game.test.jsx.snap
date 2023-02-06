@@ -62,14 +62,14 @@ exports[`renders correctly 1`] = `
     className="game-info"
   >
     <div>
-      Next player: X
+      次のプレイヤー: X
     </div>
     <ol>
       <li>
         <button
           onClick={[Function]}
         >
-          Go to game start
+          Go to game startq
         </button>
       </li>
     </ol>
