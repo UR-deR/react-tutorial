@@ -1,5 +1,5 @@
 import React from 'react';
-import { Game } from '../components/Game';
+import { Game } from './components/Game.jsx';
 
 export default {
   title: 'Q2/Game',

@@ -1,6 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`Storyshots Q2/Board Index 1`] = `
+<div>
+  <div
+    className="board-row"
+  >
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+  </div>
+  <div
+    className="board-row"
+  >
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+  </div>
+  <div
+    className="board-row"
+  >
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+    <button
+      className="square"
+      onClick={[Function]}
+    >
+      △
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Q2/Game Index 1`] = `
 <div
   className="game"
 >
@@ -75,4 +146,13 @@ exports[`renders correctly 1`] = `
     </ol>
   </div>
 </div>
+`;
+
+exports[`Storyshots Q2/Square Index 1`] = `
+<button
+  className="square"
+  onClick={[Function]}
+>
+  △
+</button>
 `;
