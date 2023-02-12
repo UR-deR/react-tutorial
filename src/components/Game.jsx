@@ -78,6 +78,8 @@ export class Game extends React.Component {
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
+    } else if (this.state.stepNumber === 9) {
+      status = 'Draw';
     } else {
       status = '次のプレイヤー: ' + (this.state.xIsNext ? 'X' : 'O');
     }
@@ -88,7 +90,7 @@ export class Game extends React.Component {
           <Board squares={current.squares} onClick={(i) => this.handleClick(i)} />
         </div>
         <div className="game-info">
-          <div>{status}</div>
+          <div id="result">{status}</div>
           <ol>{moves}</ol>
         </div>
       </div>
