@@ -9,3 +9,10 @@ export default {
 const Template = (args) => <Game {...args} />;
 
 export const Index = Template.bind({});
+Index.args = {
+  history: [
+    {
+      squares: ['X', 'O', 'X', 'X', 'O', 'O', 'O', 'X', 'X'],
+    },
+  ],
+};

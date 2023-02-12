@@ -25,30 +25,21 @@ export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      history: [
-        {
-          squares: Array(9).fill(null),
-        },
-      ],
       stepNumber: 0,
       xIsNext: true,
     };
   }
 
   handleClick(i) {
-    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const history = this.props.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
     squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.props.updateHistory(history, squares);
     this.setState({
-      history: history.concat([
-        {
-          squares: squares,
-        },
-      ]),
       stepNumber: history.length,
       xIsNext: !this.state.xIsNext,
     });
@@ -62,7 +53,7 @@ export class Game extends React.Component {
   }
 
   render() {
-    const history = this.state.history;
+    const history = this.props.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
@@ -75,10 +66,12 @@ export class Game extends React.Component {
       );
     });
 
+    const isDraw = (history) => history.map((item) => item.squares.includes(null)).includes(false);
+
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
-    } else if (this.state.stepNumber === 9) {
+    } else if (isDraw(history)) {
       status = 'Draw';
     } else {
       status = '次のプレイヤー: ' + (this.state.xIsNext ? 'X' : 'O');
