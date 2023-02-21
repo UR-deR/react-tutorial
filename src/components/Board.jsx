@@ -4,7 +4,7 @@ import '../index.css';
 
 export class Board extends React.Component {
   renderSquare(i) {
-    return <Square value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
+    return <Square index={i} value={this.props.squares[i]} onClick={() => this.props.onClick(i)} />;
   }
 
   render() {

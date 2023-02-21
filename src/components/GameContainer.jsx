@@ -7,7 +7,7 @@ export class GameContainer extends React.Component {
     this.state = {
       history: [
         {
-          squares: ['X', 'O', 'X', 'X', 'O', 'O', 'O', 'X', 'X'],
+          squares: [],
         },
       ],
     };
