@@ -71,7 +71,7 @@ export class Game extends React.Component {
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
-    } else if (history.length > 9 &&isDraw(history)) {
+    } else if (history[0].squares.length > 8 &&isDraw(history)) {
       status = 'Draw';
     } else {
       status = '次のプレイヤー: ' + (this.state.xIsNext ? 'X' : 'O');
